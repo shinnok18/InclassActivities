@@ -1,0 +1,90 @@
+/*CENG311 Activity 2 css file*/
+
+/*styling for the table goes here*/
+body 
+{
+	width: 750px;
+	margin: 0 auto;
+}
+
+table 
+{
+	border-collapse: collapse;
+	border: 1px solid black;
+	margin: 20px;
+}
+
+thead 
+{
+	background-color: yellow;
+}
+
+th, td 
+{
+	border: 1px solid black;
+	padding: .2em 1em .2em .5em;
+	text-align: left;
+	vertical-align: middle;
+}
+
+tr.six
+{
+
+	background-color: yellow
+
+}
+
+tr.four
+{
+	background-color: yellow
+}
+
+tr.two
+{
+	background-color: yellow
+
+}
+
+td.editorial
+
+{
+	
+	vertical-align: top;
+    font-weight:bold;
+	background-color: white;
+}
+
+td.customer
+{
+	vertical-align: top;
+	font-weight:bold;
+	background-color: white;
+}
+
+td.marketing
+{
+	vertical-align: top;
+	font-weight:bold;
+	background-color: white;
+}
+
+td.right
+{
+
+	text-align: right;
+}
+
+td.right2
+{
+	font-weight:bold;
+	text-align: right;
+	background-color: yellow;
+
+}
+
+td.total
+{
+	font-weight:bold;
+	text-align: right;
+	background-color: yellow;
+}

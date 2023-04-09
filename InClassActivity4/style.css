@@ -1,0 +1,43 @@
+*{box-sizing: border-box;
+}
+input[type=text], input[type=email], input[type=number], input[type=select], input[type=date],input[type=select],input[type=password], input[type=tel]
+{
+    width: 10%;
+    padding: 5px;
+    border: 1px solid rgb(168, 166, 166);
+    border-radius: 4px;
+    resize: vertical;
+}
+textarea{
+ 
+  display: inline-block; 
+  width: 200px;
+  padding: 10px;
+  vertical-align: top;
+   
+}
+input[type=radio],input[type=checkbox]{
+    width: 1%;
+    padding-left: 0%;
+    border: 1px solid rgb(168, 166, 166);
+    border-radius: 4px;
+    resize: vertical;
+}
+h1{
+    font-family: Arial;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: bold;
+    color: black;
+    text-align: left;
+}
+label{
+    padding: 12px 12px 12px 0;
+    display: inline-block;
+}
+
+span{
+
+    display: inline-block;
+    text-align: right;
+}

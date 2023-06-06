@@ -1,25 +1,29 @@
 $(document).ready(function() {
+	
+	$("#nav_list a").click(function(event) {
+	  event.preventDefault(); 
   
-    $("#nav_list a").click(function(e) {
-      var title = $(this).attr("title");
-      SpeakerData(title);
-    });
-
-    function SpeakerData(file) {
-      var fileName = file + '.json';
-      $.getJSON(fileName, function(data) {
-        
-        $("main").empty();  //clear the elements
+	  //title JSON
+	  var fileName = $(this).attr("title") + ".json";
   
-        data.speakers.forEach(function(speaker) {
-          var title = $("<h1>").text(speaker.title);
-          var image = $("<img>").attr("src", speaker.image);
-          var month = $("<h2>").html(speaker.month + "<br>" + speaker.speaker);
-          var description = $("<p>").text(speaker.text);
+	  // main öğesindeki içeriği temizle
+	  $("main").empty();
+	 
+	  // JSON dosyasını yükle
+	  $.getJSON("json_files/" + fileName, function(data) {
+		//console.log("json_files\\" + fileName);
+		//console.log(data);
   
-          $("main").append(title, image, month, description);
-        });
-      });
-    }
+		// HTML içeriği 
+		$.each(data.speakers, function(index, speaker) {
+		  var html = '<h1>' + speaker.title + '</h1>' +
+			'<img src="' + speaker.image + '">' +
+			'<h2>' + speaker.month + '<br>' + speaker.speaker + '</h2>' +
+			'<p>' + speaker.text + '</p>';
   
+		  $("main").html(html);
+		});
+	  });
+	});
   });
+  

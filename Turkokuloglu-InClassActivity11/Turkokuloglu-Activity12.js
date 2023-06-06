@@ -34,11 +34,11 @@ for (var i = 0; i < sidebarLinks.length; i++) {
 
         // Create HTML elements for the speaker's information
         var imgElement = document.createElement('img');
-        imgElement.src = 'json_files/' + data.image;
+        imgElement.src = 'images/' + data.image;
         mainElement.appendChild(imgElement);
 
         var h2Element = document.createElement('h2');
-        h2Element.textContent = data.month + '\n' + data.name;
+        h2Element.innerHTML = data.month + '<br>' + data.name;
         mainElement.appendChild(h2Element);
 
         var pElement = document.createElement('p');
